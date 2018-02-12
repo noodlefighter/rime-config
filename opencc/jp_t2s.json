@@ -1,0 +1,16 @@
+{
+  "name": "Japanese Kyuujitai to Shinjitai",
+  "segmentation": {
+    "type": "mmseg",
+    "dict": {
+      "type": "ocd",
+      "file": "JPVariants.ocd"
+    }
+  },
+  "conversion_chain": [{
+    "dict": {
+      "type": "ocd",
+      "file": "JPVariants.ocd"
+    }
+  }]
+}

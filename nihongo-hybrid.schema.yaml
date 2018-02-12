@@ -1,0 +1,88 @@
+# Rime schema
+# vim: set sw=2 sts=2 et:
+# encoding: utf-8
+
+schema:
+  schema_id: nihongo-hybrid
+  name: nihongo-hybrid
+  version: 'v0.2'
+  author:
+    - ensigma96 <ensigma96@gmail.com>
+  dependencies:
+    - luna_pinyin # for using reverse lookup
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ Chi, Eng ]
+  - name: full_shape
+    states: [ Half, Full ]
+  - name: jp_variants
+    states: [ Trad, Simp ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: 'zyxwvutsrqponmlkjihgfedcba-_'
+  delimiter: " '"
+  algebra:
+    - 'derive/_/x/'
+    - 'derive/-/q/'
+    # Add / remove rules the as you wish
+    - 'derive/i_e/ye/'
+    # - 'derive/fu/hu/' 
+
+translator:
+  dictionary: nihongo-hybrid
+  spelling_hints: 5
+  comment_format:
+    - 'xlit|q|ー|'
+  preedit_format:
+    - 'xlit|q|ー|'
+
+reverse_lookup:
+  dictionary: luna_pinyin
+  prefix: "`"
+  suffix: "'"
+  tips: 〔拼音〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+simplifier:
+  option_name: jp_variants
+  opencc_config: jp_t2s.json
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"
