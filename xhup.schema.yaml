@@ -14,6 +14,7 @@ schema:
   dependencies:
     - luna_pinyin
     - double_pinyin_flypy
+    - pinyin_simp
 
 switches:
   - name: ascii_mode
@@ -73,7 +74,7 @@ translator:
 
 reverse_lookup:
   dictionary: pinyin_simp
-  # prism: double_pinyin_flypy
+#  prism: double_pinyin_flypy
   prefix: "`"
   # suffix: "'"
   tips: 〔拼音〕
