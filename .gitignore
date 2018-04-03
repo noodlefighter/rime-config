@@ -4,4 +4,5 @@
 sync/
 user.yaml
 installation.yaml
+build/
 

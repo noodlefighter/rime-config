@@ -1,0 +1,11 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.10.0
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Tue Apr  3 13:10:54 2018"
+  rime_version: 1.3.0
+patch:
+  "style/color_scheme": doraemon
+  "style/horizontal": true    
+  "style/inline_preedit": true
+  "style/font_point": 12
