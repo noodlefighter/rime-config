@@ -5,5 +5,5 @@
 
 ## 前端
 
-* Windows: [PIME](https://github.com/osfans/PRIME/releases)
+* Windows: [小狼毫](https://github.com/rime/weasel/releases)
 * Linux: [ibus-rime(librime>=1.2.9)](https://github.com/rime/ibus-rime)
