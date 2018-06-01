@@ -26685,7 +26685,7 @@ IP地址	ipdv
 聋子	lsz
 笼子	lszi
 傈僳族	lszu
-论坛	lt
+#论坛	lt
 来头不小	ltbx
 量体裁衣	ltcy
 鹿特丹	ltd
@@ -27272,7 +27272,6 @@ IP地址	ipdv
 老一套	lytc
 轮胎	lytd
 论题	lyti
-论坛	lytj
 鲤鱼跳龙门	lytm
 露一手	lyu
 赖以生存	lyuc
@@ -33037,7 +33036,7 @@ IP地址	ipdv
 平行线	pxx
 平行线	pxxm
 偏信则暗	pxza
-便宜	py
+#拼音	py
 疲于奔命	pyb
 碰一鼻子灰	pybh
 疲于奔命	pybm
@@ -59834,6 +59833,9 @@ nm	ofdw
 物有所值	wysv
 骑驴找马	qlvm
 物超所值	wisv
+收集	uzji
 
 # 自定2简词
+便宜	py
 简易	jy
+聊天	lt
