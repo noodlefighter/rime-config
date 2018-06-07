@@ -56,8 +56,8 @@ speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
   # delimiter: " ;'"
   max_code_length: 4
-  auto_select: true
-  auto_select_unique_candidate: true
+  auto_select: false
+  auto_select_unique_candidate: false
 
 translator:
   dictionary: xhup
@@ -94,8 +94,10 @@ key_binder:
   import_preset: default
   bindings:
     - {accept: semicolon, send: 2, when: has_menu}
-    - {accept: apostrophe, send: 3, when: has_menu} 
-
+    # 无逗号句号翻页
+    - { when: paging, accept: comma, send: comma }
+    - { when: has_menu, accept: period, send: period }
+    
 recognizer:
   import_preset: default
   patterns:

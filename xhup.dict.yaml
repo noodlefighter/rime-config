@@ -59475,7 +59475,46 @@ nm	ofdw
 Ⅷ	oyb
 Ⅸ	oyj
 Ⅹ	oyu
-“	oz
+“	oz 
+
+# 附加字 by noodlefighter
+# 原则：缺少的字 （不会导致重码的）自己常用的词+（无视重码的）成语
+祇	qipu
+祗	vipd
+沢	zedi
+咲	xnkt
+仮	fjry
+唄	bdkb
+浩瀚无垠	hhwy
+超凡脱俗	ifts
+服务器	fwq
+象限	xlxm
+现充	xmis
+八进制	bjvi
+浮点	fudm
+字符串	zfir
+推特	tvte
+一时兴起	yuxq
+人脉	rfmd
+炒粉	ucff
+发自内心	fznx
+陪笑	pwxn
+登入	dgru
+糟心	zcxb
+勿在浮沙筑高台	wzft
+物有所值	wysv
+骑驴找马	qlvm
+物超所值	wisv
+收集	uzji
+便携	bmxp
+文库	wfku
+盛极一时	ujyu
+
+# 自定2简词
+便宜	py
+简易	jy
+聊天	lt
+论坛	lytj
 
 
 # 2简提示
@@ -59804,41 +59843,3 @@ nm	ofdw
 昨天(zt)	zot
 在线(zx)	zdx
 怎样(zy)	zfyh
-
-# 附加字 by noodlefighter
-# 原则：缺少的字 （不会导致重码的）自己常用的词+（无视重码的）成语
-祇	qipu
-祗	vipd
-沢	zedi
-咲	xnkt
-仮	fjry
-唄	bdkb
-浩瀚无垠	hhwy
-超凡脱俗	ifts
-服务器	fwq
-象限	xlxm
-现充	xmis
-八进制	bjvi
-浮点	fudm
-字符串	zfir
-推特	tvte
-一时兴起	yuxq
-人脉	rfmd
-炒粉	ucff
-发自内心	fznx
-陪笑	pwxn
-登入	dgru
-糟心	zcxb
-勿在浮沙筑高台	wzft
-物有所值	wysv
-骑驴找马	qlvm
-物超所值	wisv
-收集	uzji
-便携	bmxp
-文库	wfku
-盛极一时	ujyu
-
-# 自定2简词
-便宜	py
-简易	jy
-聊天	lt
