@@ -20,6 +20,13 @@ encoder:
       formula: "AaBaCaZa"
 ...
 
+# 自建词库（高优先级）
+摇杆	ycgj
+
+# xhup原始表
+# 更改记录：
+#     py=拼音->便宜
+#     lt=论坛->聊天
 啊	a
 按	a
 阿	aa
@@ -59485,6 +59492,8 @@ nm	ofdw
 咲	xnkt
 仮	fjry
 唄	bdkb
+
+# 自建词库（低优先级）
 浩瀚无垠	hhwy
 超凡脱俗	ifts
 服务器	fwq
@@ -59509,6 +59518,9 @@ nm	ofdw
 便携	bmxp
 文库	wfku
 盛极一时	ujyu
+耦合	ouhe
+拆包	idbc
+狡兔死走狗烹	jtsp
 
 # 自定2简词
 便宜	py
