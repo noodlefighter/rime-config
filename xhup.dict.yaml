@@ -22,6 +22,8 @@ encoder:
 
 # 自建词库（高优先级）
 摇杆	ycgj
+适配	uipw
+链路	lmlu
 
 # xhup原始表
 # 更改记录：
@@ -59501,7 +59503,7 @@ nm	ofdw
 现充	xmis
 八进制	bjvi
 浮点	fudm
-字符串	zfir
+字符串	zfi
 推特	tvte
 一时兴起	yuxq
 人脉	rfmd
