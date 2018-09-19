@@ -25,6 +25,7 @@ encoder:
 射频	uepb
 适配	uipw
 链路	lmlu
+烧录	uclu
 
 # xhup原始表
 # 更改记录：
