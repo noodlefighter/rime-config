@@ -58,6 +58,7 @@ speller:
   max_code_length: 4
   auto_select: false
   auto_select_unique_candidate: false
+  auto_clear: auto
 
 translator:
   dictionary: xhup
