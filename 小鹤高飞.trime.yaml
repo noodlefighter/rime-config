@@ -1,0 +1,168 @@
+# Trime default style settings
+# encoding: utf-8
+
+config_version: "for小鹤主题4.3"
+name: 小鹤高飞
+# 本主题依附于小鹤主题使用，下面__include: 之后紧跟的就是主题名
+# 如使用本主题，小鹤主题名应为：trime.yaml；如小鹤主题名为：小鹤.trime.yaml，则需在本文件内查找“__include: trime”替换为“__include: 小鹤.trime”
+# 
+author: 散步的鹤 flypy.com#作者资讯
+height:
+# ----------键盘行高度调整------------
+
+  A: &VJG 56          #主键盘行高
+  B: &VJM 56          #增高行行高，如与其他行高相等，则ABC等值
+  C: &FJG 56           #ϟ12键盘行高  C=(A*4+B)/5=56
+
+# ----------增高行键宽度调整------------
+
+  H: &HCK 19          #=回车宽
+  K: &KGK 46         #=空格+分号=34+12
+  Y: &YYK 17.5        #语音键宽
+  G: &SDZY 5         #三个点左右隔
+  S: &SD 2.5          #三个点
+  # 100=H+K+Y+2*G+3*S
+  X: &YCJ 3           #增高行隐藏键高低
+#  --------结束------------
+style:
+  __include: trime:/style
+  key_height: *FJG
+android_keys:
+  __include: trime:/android_keys
+preset_keys:
+  __include: trime:/preset_keys
+  #__patch:
+    #K_defaultVJ:  #注销助记键盘设定键
+fallback_colors:
+  __include: trime:/fallback_colors
+preset_color_schemes:
+  __include: trime:/preset_color_schemes
+preset_keyboards:
+  __include: trime:/preset_keyboards
+  #__patch:
+    #defaultVJ:  #注销助记键盘
+  default:
+    __include: trime:/preset_keyboards/default
+    height: *VJG
+    __patch:
+        "keys/@33/label": "Love Fly"
+        "keys/@30/height": *VJG #空格行
+        "keys/@35": {height: *VJM, click: IME_switch1, width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@36": {key_text_size: 7, click: IME_switch1, width: *SD, key_press_offset_y: 0, key_back_color: zgb, key_text_color: cd1, hilited_key_back_color: zgb, hilited_key_text_color: cd1}
+        "keys/@37": {key_text_size: 7, click: IME_switch1, width: *SD, key_press_offset_y: 0, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: cd2}
+        "keys/@38": {key_text_size: 7, click: IME_switch1, width: *SD, key_press_offset_y: 0, key_back_color: zgb, key_text_color: cd3, hilited_key_back_color: zgb, hilited_key_text_color: cd3}
+        "keys/@39": {click: IME_switch1, width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@40": {click: ".", label: "🎤", composing: JUHCGF, width: *YYK, long_click: VOICE_ASSIST, key_back_color: zgb, key_text_color: cd2, key_symbol_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@after last": {click: space2, width: *KGK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@next": {click: Hide, width: *HCK, key_text_offset_y: *YCJ, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: 0x00, hilited_key_symbol_color: zgb}
+  defaultVJ:
+    __include: /preset_keyboards/default
+    __patch:
+        "keys/@0/key_text_color": 0x00
+        "keys/@1/key_text_color": 0x00
+        "keys/@2/key_text_color": 0x00
+        "keys/@3/key_text_color": 0x00
+        "keys/@4/key_text_color": 0x00
+        "keys/@5/key_text_color": 0x00
+        "keys/@6/key_text_color": 0x00
+        "keys/@7/key_text_color": 0x00
+        "keys/@8/key_text_color": 0x00
+        "keys/@9/key_text_color": 0x00
+        "keys/@11/key_text_color": 0x00
+        "keys/@12/key_text_color": 0x00
+        "keys/@13/key_text_color": 0x00
+        "keys/@14/key_text_color": 0x00
+        "keys/@15/key_text_color": 0x00
+        "keys/@16/key_text_color": 0x00
+        "keys/@17/key_text_color": 0x00
+        "keys/@18/key_text_color": 0x00
+        "keys/@19/key_text_color": 0x00
+        "keys/@22/key_text_color": 0x00
+        "keys/@23/key_text_color": 0x00
+        "keys/@24/key_text_color": 0x00
+        "keys/@25/key_text_color": 0x00
+        "keys/@26/key_text_color": 0x00
+        "keys/@27/key_text_color": 0x00
+        "keys/@28/key_text_color": 0x00
+        "keys/@0/key_symbol_color": 0x00
+        "keys/@1/key_symbol_color": 0x00
+        "keys/@2/key_symbol_color": 0x00
+        "keys/@3/key_symbol_color": 0x00
+        "keys/@4/key_symbol_color": 0x00
+        "keys/@5/key_symbol_color": 0x00
+        "keys/@6/key_symbol_color": 0x00
+        "keys/@7/key_symbol_color": 0x00
+        "keys/@8/key_symbol_color": 0x00
+        "keys/@9/key_symbol_color": 0x00
+        "keys/@11/key_symbol_color": 0x00
+        "keys/@12/key_symbol_color": 0x00
+        "keys/@13/key_symbol_color": 0x00
+        "keys/@14/key_symbol_color": 0x00
+        "keys/@15/key_symbol_color": 0x00
+        "keys/@16/key_symbol_color": 0x00
+        "keys/@17/key_symbol_color": 0x00
+        "keys/@18/key_symbol_color": 0x00
+        "keys/@19/key_symbol_color": 0x00
+        "keys/@22/key_symbol_color": 0x00
+        "keys/@23/key_symbol_color": 0x00
+        "keys/@24/key_symbol_color": 0x00
+        "keys/@25/key_symbol_color": 0x00
+        "keys/@26/key_symbol_color": 0x00
+        "keys/@27/key_symbol_color": 0x00
+        "keys/@28/key_symbol_color": 0x00
+    keyboard_back_color: Vback
+    name: "无刻"
+  letter:
+    __include: trime:/preset_keyboards/letter
+    height: *VJG
+    __patch:
+        "keys/@30/height": *VJG #空格行
+        "keys/@32/key_text_offset_x": 52
+        "keys/@32/key_symbol_offset_x": 54
+        "keys/@35": {height: *VJM, click: "", width: *SDZY, key_back_color: zgb, key_text_color: bdt, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@36": {key_text_size: 7, click: IME_switch1, width: *SD, key_press_offset_y: 0, key_back_color: zgb, key_text_color: cd1, hilited_key_back_color: zgb, hilited_key_text_color: cd1}
+        "keys/@37": {key_text_size: 7, click: IME_switch1, width: *SD, key_press_offset_y: 0, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: cd2}
+        "keys/@38": {key_text_size: 7, click: IME_switch1, width: *SD, key_press_offset_y: 0, key_back_color: zgb, key_text_color: cd3, hilited_key_back_color: zgb, hilited_key_text_color: cd3}
+        "keys/@39": {click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@40": {click: "", width: *YYK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@after last": {click: space2, label: " ", width: *KGK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@next": {click: Hide, width: *HCK, key_text_offset_y: *YCJ, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+  number:
+    __include: trime:/preset_keyboards/number
+    height: *VJG
+    __patch:
+        "keys/@15/height": *VJG   # enter行
+        "keys/@20": {height: *VJM, click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@21": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd1, hilited_key_back_color: zgb, hilited_key_text_color: cd1}
+        "keys/@22": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: cd2}
+        "keys/@23": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd3, hilited_key_back_color: zgb, hilited_key_text_color: cd3}
+        "keys/@24": {click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@25": {click: "", width: *YYK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@after last": {click: "", width: *KGK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@next": {click: Hide, width: *HCK, key_text_offset_y: *YCJ, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+  edit:
+    __include: trime:/preset_keyboards/edit
+    height: *VJG
+    __patch:
+        "keys/@15/height": *VJG
+        "keys/@20": {height: *VJM, click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@21": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd1, hilited_key_back_color: zgb, hilited_key_text_color: cd1}
+        "keys/@22": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: cd2}
+        "keys/@23": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd3, hilited_key_back_color: zgb, hilited_key_text_color: cd3}
+        "keys/@24": {click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@25": {click: "", width: *YYK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@after last": {click: "", width: *KGK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@next": {click: Hide, width: *HCK, key_text_offset_y: *YCJ, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+  menu:
+    __include: trime:/preset_keyboards/menu
+    height: *VJG
+    __patch:
+        "keys/@21/height": *VJG  #返回键行
+        "keys/@28": {height: *VJM, click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@29": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd1, hilited_key_back_color: zgb, hilited_key_text_color: cd1}
+        "keys/@30": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: cd2}
+        "keys/@31": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd3, hilited_key_back_color: zgb, hilited_key_text_color: cd3}
+        "keys/@32": {click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@33": {click: "", width: *YYK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@after last": {click: "", width: *KGK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@next": {click: Hide, width: *HCK, key_text_offset_y: *YCJ, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}

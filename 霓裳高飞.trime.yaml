@@ -1,0 +1,266 @@
+# Trime default style settings
+# encoding: utf-8
+
+config_version: "for小鹤主题4.3"
+name: 霓裳高飞
+# 本主题依附于小鹤主题使用，下面__include: 之后紧跟的就是主题名
+# 如使用本主题，小鹤主题名应为：trime.yaml；如小鹤主题名为：小鹤.trime.yaml，则需在本文件内查找“__include: trime”替换为“__include: 小鹤.trime”
+# 
+author: 散步的鹤 flypy.com#作者资讯
+height:
+# ----------键盘行高度调整------------
+
+  A: &VJG 56      #主键盘行高
+  B: &VJM 56      #增高行行高，如与其他行高相等，则ABC等值
+  C: &FJG 56       #ϟ12键盘行高  C=(A*4+B)/5=56
+
+# ----------空格、增高行键宽度调整------------
+
+  H: &HCK 17          #回车宽
+  K: &KGK 35         #空格宽
+  S: &SBK 16          #数字标点键宽
+  #空格行 数字标点3*S+空格K+回车H=100
+  
+  D: &SD 2.5          #三个点
+  G: &SDZY 4.25      #三个点左右隔
+  # 100=D+E+3*F+3*G+2*H
+  #增高行 三个点宽3*D+两个隔宽2*G+两个标点2*S+空格K+回车H=100
+  X: &YCJ 3           #增高行隐藏键高低
+#  --------结束------------
+style:
+  __include: trime:/style
+  key_height: *FJG
+android_keys:
+  __include: trime:/android_keys
+preset_keys:
+  __include: trime:/preset_keys
+fallback_colors:
+  __include: trime:/fallback_colors
+preset_color_schemes:
+  __include: trime:/preset_color_schemes
+preset_keyboards:
+  __include: trime:/preset_keyboards
+  default:
+    __include: trime:/preset_keyboards/default
+    height: *VJG
+    __patch:
+        "keys/@11/long_click": select_all
+        "keys/@13/long_click": Date
+        "keys/@14/long_click": ";"
+        "keys/@30/height": *VJG #空格行
+        "keys/@30/composing": 
+        "keys/@30/key_symbol_offset_x": 0
+        "keys/@30/width": *SBK
+        "keys/@31/width": *SBK
+        "keys/@31/long_click": "!"
+        "keys/@31/composing": 
+        "keys/@31/key_symbol_offset_x": 0
+        "keys/@32": {click: space, width: *KGK, key_text_size: 9, key_text_offset_x: 0, key_text_offset_y: 3, key_symbol_offset_x: 0, key_symbol_offset_y: 6, long_click: Mode_switch, swipe_left: Left, swipe_right: Right, key_back_color: kgb, key_text_color: kgt, key_symbol_color: kgs, hilited_key_back_color: kgh, hilited_key_text_color: kght, hilited_key_symbol_color: kghs}
+        "keys/@33": {click: ".", label: "  。", width: *SBK, composing: delimiterJ, long_click: "?", key_back_color: bdb, key_text_color: bdt, key_symbol_color: bds, hilited_key_back_color: bdh, hilited_key_text_color: bdht}
+        "keys/@34/width": *HCK
+        "keys/@34/key_symbol_offset_x": 0
+        "keys/@35": {height: *VJM, click: IME_switch1, width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@36": {key_text_size: 7, click: IME_switch1, width: *SD, key_press_offset_y: 0, key_back_color: zgb, key_text_color: cd1, hilited_key_back_color: zgb, hilited_key_text_color: cd1}
+        "keys/@37": {key_text_size: 7, click: IME_switch1, width: *SD, key_press_offset_y: 0, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: cd2}
+        "keys/@38": {key_text_size: 7, click: IME_switch1, width: *SD, key_press_offset_y: 0, key_back_color: zgb, key_text_color: cd3, hilited_key_back_color: zgb, hilited_key_text_color: cd3}
+        "keys/@39": {click: IME_switch1, width: *SDZY, key_back_color: zgb, key_text_color: 0x00, key_symbol_color: 0x00ffffff, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@40": {click: ";", label: '🎤', composing: space2, width: *SBK, long_click: VOICE_ASSIST, key_back_color: zgb, key_text_color: cd2, key_symbol_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@41": {click: space2, width: *KGK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@after last": {click: ".", width: *SBK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@next": {click: Hide, width: *HCK, key_text_offset_y: *YCJ, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+    key_symbol_offset_x: 0
+  defaultVJ:
+    __include: /preset_keyboards/default
+    __patch:
+        "keys/@0/long_click": "犭求"
+        "keys/@1/long_click": 亠
+        "keys/@2/long_click": "彐山"
+        "keys/@3/long_click": 亻
+        "keys/@4/long_click": 田
+        "keys/@5/long_click": "羊"
+        "keys/@6/long_click": "饣石"
+        "keys/@7/long_click": "彳亍"
+        "keys/@8/long_click": "日月"
+        "keys/@9/long_click": "礻衤"
+        "keys/@9/key_symbol_offset_x": 0
+        "keys/@9/key_text_color": cdh
+        "keys/@11/key_symbol_offset_x": 0
+        "keys/@11/key_text_color": cdh
+        "keys/@12/long_click": 罒
+        "keys/@13/long_click": "冫氵"
+        "keys/@13/key_symbol_offset_x": 0
+        "keys/@13/key_text_color": cdh
+        "keys/@14/long_click": "扌缶"
+        "keys/@15/long_click": "鬼骨革"
+        "keys/@16/long_click": "灬虍黑"
+        "keys/@18/long_click": "囗㠯"
+        "keys/@19/key_symbol_offset_x": 0
+        "keys/@19/key_text_color": cdh
+        "keys/@23/long_click": "忄乂"
+        "keys/@25/key_symbol_offset_x": 0
+        "keys/@25/key_text_color": cdh
+        "keys/@26/long_click": "宀冖丷勹"
+        "keys/@27/key_symbol_offset_x": 0
+        "keys/@27/key_text_color": cdh
+        "keys/@0/hint": "具其上"
+        "keys/@1/hint": "夂攵文"
+        "keys/@2/hint": "卩阝见下"
+        "keys/@3/hint": 
+        "keys/@4/hint": 
+        "keys/@5/hint": "讠𧘇"
+        "keys/@6/hint": "氺"
+        "keys/@7/hint": 虫
+        "keys/@8/hint": 目
+        "keys/@9/hint": 
+        "keys/@11/hint": 鱼
+        "keys/@12/hint": "纟厶"
+        "keys/@13/hint": "刂"
+        "keys/@14/hint": "寿带上"
+        "keys/@15/hint": "艮 既左"
+        "keys/@16/hint": "余下"
+        "keys/@17/hint": "钅金"
+        "keys/@18/hint": "匚冂凵"
+        "keys/@19/hint": "耂立龙"
+        "keys/@22/hint": "廴辶"
+        "keys/@23/hint": "⺍"
+        "keys/@24/hint": "艹廾"
+        "keys/@25/hint": "豸"
+        "keys/@26/hint": "疒 比左"
+        "keys/@27/hint": "牜"
+        "keys/@28/hint": 朩
+        "keys/@0/key_text_color": 
+        "keys/@1/key_text_color": 
+        "keys/@2/key_text_color": 
+        "keys/@3/key_text_color": 
+        "keys/@4/key_text_color": 
+        "keys/@5/key_text_color": 
+        "keys/@6/key_text_color": 
+        "keys/@7/key_text_color": 
+        "keys/@8/key_text_color": 
+        "keys/@9/key_text_color": cdh
+        "keys/@11/key_text_color": cdh
+        "keys/@12/key_text_color": 
+        "keys/@13/key_text_color": cdh
+        "keys/@14/key_text_color": 
+        "keys/@15/key_text_color": 
+        "keys/@16/key_text_color": 
+        "keys/@17/key_text_color": 
+        "keys/@18/key_text_color": 
+        "keys/@19/key_text_color": cdh
+        "keys/@22/key_text_color": 
+        "keys/@23/key_text_color": 
+        "keys/@24/key_text_color": 
+        "keys/@25/key_text_color": cdh
+        "keys/@26/key_text_color": 
+        "keys/@27/key_text_color": cdh
+        "keys/@28/key_text_color": 
+        "keys/@0/key_symbol_color": 
+        "keys/@1/key_symbol_color": 
+        "keys/@2/key_symbol_color": 
+        "keys/@3/key_symbol_color": 
+        "keys/@4/key_symbol_color": 
+        "keys/@5/key_symbol_color": 
+        "keys/@6/key_symbol_color": 
+        "keys/@7/key_symbol_color": 
+        "keys/@8/key_symbol_color": 
+        "keys/@9/key_symbol_color": 
+        "keys/@11/key_symbol_color": 
+        "keys/@12/key_symbol_color": 
+        "keys/@13/key_symbol_color": 
+        "keys/@14/key_symbol_color": 
+        "keys/@15/key_symbol_color": 
+        "keys/@16/key_symbol_color": 
+        "keys/@17/key_symbol_color": 
+        "keys/@18/key_symbol_color": 
+        "keys/@19/key_symbol_color": 
+        "keys/@22/key_symbol_color": 
+        "keys/@23/key_symbol_color": 
+        "keys/@24/key_symbol_color": 
+        "keys/@25/key_symbol_color": 
+        "keys/@26/key_symbol_color": 
+        "keys/@27/key_symbol_color": 
+        "keys/@28/key_symbol_color": 
+        "keys/@30/key_symbol_offset_x": 14
+        "keys/@31/key_symbol_offset_x": 14
+        "keys/@32/key_symbol_offset_x": 42
+        "keys/@33/key_symbol_offset_x": 14
+        "keys/@34/key_symbol_offset_x": 16
+    key_hint_offset_y: -2
+    keyboard_back_color: Vback
+    name: "小鹤部件助记"
+  letter:
+    __include: trime:/preset_keyboards/letter
+    height: *VJG
+    __patch:
+        "keys/@11/long_click": select_all
+        "keys/@13/long_click": Date
+        "keys/@14/long_click": "&"
+        "keys/@30/height": *VJG #空格行
+        "keys/@30/composing": 
+        "keys/@30/width": *SBK
+        "keys/@30/key_symbol_offset_x": 0
+        "keys/@31/long_click": "!"
+        "keys/@31/composing": 
+        "keys/@31/key_symbol_offset_x": 0
+        "keys/@31/width": *SBK
+        "keys/@32/width": *KGK
+        "keys/@32/key_text_color": ykgt
+        "keys/@32/key_text_offset_x": 0
+        "keys/@32/key_symbol_offset_x": 0
+        "keys/@32/key_text_offset_y": 3
+        "keys/@32/key_back_color": kgb
+        "keys/@32/hilited_key_back_color": kgh
+        "keys/@33": {click: ".", label: " 。", composing: delimiterJ, long_click: "?", width: *SBK, key_symbol_offset_x: 0, key_back_color: bdb, key_text_color: bdt, key_symbol_color: bds, hilited_key_back_color: bdh, hilited_key_text_color: hbdt}
+        "keys/@34/width": *HCK
+        "keys/@34/key_symbol_offset_x": 0
+        "keys/@35": {height: *VJM, click: "", width: *SDZY, key_back_color: zgb, key_text_color: bdt, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@36": {key_text_size: 7, click: IME_switch1, width: *SD, key_press_offset_y: 0, key_back_color: zgb, key_text_color: cd1, hilited_key_back_color: zgb, hilited_key_text_color: cd1}
+        "keys/@37": {key_text_size: 7, click: IME_switch1, width: *SD, key_press_offset_y: 0, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: cd2}
+        "keys/@38": {key_text_size: 7, click: IME_switch1, width: *SD, key_press_offset_y: 0, key_back_color: zgb, key_text_color: cd3, hilited_key_back_color: zgb, hilited_key_text_color: cd3}
+        "keys/@39": {click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@40": {click: "", width: *SBK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@41": {click: space2, label: " ", width: *KGK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@after last": {click: "", width: *SBK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@next": {click: Hide, width: *HCK, key_text_offset_y: *YCJ, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+  number:
+    __include: trime:/preset_keyboards/number
+    height: *VJG
+    __patch:
+        "keys/@15/height": *VJG   # enter行
+        "keys/@20": {height: *VJM, click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@21": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd1, hilited_key_back_color: zgb, hilited_key_text_color: cd1}
+        "keys/@22": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: cd2}
+        "keys/@23": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd3, hilited_key_back_color: zgb, hilited_key_text_color: cd3}
+        "keys/@24": {click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@25": {click: "", width: *SBK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@26": {click: "", width: *KGK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@after last": {click: "", width: *SBK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@next": {click: Hide, width: *HCK, key_text_offset_y: *YCJ, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+  edit:
+    __include: trime:/preset_keyboards/edit
+    height: *VJG
+    __patch:
+        "keys/@15/height": *VJG
+        "keys/@20": {height: *VJM, click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@21": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd1, hilited_key_back_color: zgb, hilited_key_text_color: cd1}
+        "keys/@22": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: cd2}
+        "keys/@23": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd3, hilited_key_back_color: zgb, hilited_key_text_color: cd3}
+        "keys/@24": {click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@25": {click: "", width: *SBK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@26": {click: "", width: *KGK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@after last": {click: "", width: *SBK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@next": {click: Hide, width: *HCK, key_text_offset_y: *YCJ, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+  menu:
+    __include: trime:/preset_keyboards/menu
+    height: *VJG
+    __patch:
+        "keys/@21/height": *VJG  #返回键行
+        "keys/@28": {height: *VJM, click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@29": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd1, hilited_key_back_color: zgb, hilited_key_text_color: cd1}
+        "keys/@30": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: cd2}
+        "keys/@31": {key_text_size: 7, click: IME_switch1, width: *SD, key_back_color: zgb, key_text_color: cd3, hilited_key_back_color: zgb, hilited_key_text_color: cd3}
+        "keys/@32": {click: "", width: *SDZY, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@33": {click: "", width: *SBK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@34": {click: "", width: *KGK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@after last": {click: "", width: *SBK, key_back_color: zgb, key_text_color: 0x00, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
+        "keys/@next": {click: Hide, width: *HCK, key_text_offset_y: *YCJ, key_back_color: zgb, key_text_color: cd2, hilited_key_back_color: zgb, hilited_key_text_color: 0x00}
