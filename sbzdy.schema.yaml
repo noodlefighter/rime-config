@@ -1,0 +1,54 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: sbzdy
+  name: "自定义词典"
+  version: "9.5"
+  author:
+    - 戴石麟
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - echo_translator
+    - punct_translator
+    - table_translator
+
+speller:
+  alphabet: "qwertasdfgzxcvbyuiophjklnm1234567890"
+  initials: "qwrtsdfgzxcvbyphjklnm"
+  auto_select: true
+
+translator:
+  dictionary: sbzdy
+  enable_user_dict: false
+  enable_encoder: false
+  enable_sentence: false
+  strict_spelling: true
+  enable_completion: true
+  encode_commit_history: false
+

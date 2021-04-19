@@ -1,0 +1,19 @@
+{
+  "name": "xhsb",
+  "segmentation": {
+    "type": "mmseg",
+    "dict": {
+      "type": "text",
+      "file": "xhsb.txt"
+    }
+  },
+  "conversion_chain": [{
+    "dict": {
+      "type": "group",
+	  "dicts": [{
+		"type": "text",
+		"file": "xhsb.txt"
+	  }]
+    }
+  }]
+}
