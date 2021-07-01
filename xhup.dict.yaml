@@ -26,6 +26,7 @@ encoder:
 电压	dmya
 摸鱼	moyu
 顺滑	uyhx
+通勤	tsqb
 
 
 # 个人常用表（高优先级）
@@ -58950,6 +58951,10 @@ nm	ofdw
 ∥	ofux
 ∧	ofux
 ∨	ofux
+⊂	ofux
+⊆	ofux
+⊃	ofux
+⊇	ofux
 ∩	ofux
 ∪	ofux
 ∫	ofux
