@@ -69,6 +69,7 @@ encoder:
 
 # 自建常用表（高优先级）
 电压	dmya
+直流	vilq
 摸鱼	moyu
 顺滑	uyhx
 通勤	tsqb
@@ -59531,6 +59532,7 @@ nm	ofdw
 朊	yroe
 
 # 常用表（低优先级）
+电机	dmji
 人脉	rfmd
 陪笑	pwxn
 登入	dgru
