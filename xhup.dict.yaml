@@ -63,7 +63,6 @@ encoder:
 
 # 自定2简词
 便宜	py
-简易	jy
 聊天	lt
 论坛	lytj
 
@@ -92,6 +91,7 @@ encoder:
 横轴	hgvz
 有利	yzli
 琉球	lqqq
+回调	hvdn
 
 # 字词部分
 啊	a
@@ -59531,8 +59531,12 @@ nm	ofdw
 唄	bdkb
 朊	yroe
 
+# 二简
+简易	jy
+
 # 常用表（低优先级）
 电机	dmji
+手柄	uzbk
 人脉	rfmd
 陪笑	pwxn
 登入	dgru
