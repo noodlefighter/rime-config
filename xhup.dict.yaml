@@ -1,5 +1,6 @@
 # Rime dict
 # encoding: utf-8
+# vim: set expandtab!
 
 ---
 name: xhup
@@ -92,6 +93,7 @@ encoder:
 有利	yzli
 琉球	lqqq
 回调	hvdn
+摩羯座	mjz
 
 # 字词部分
 啊	a
